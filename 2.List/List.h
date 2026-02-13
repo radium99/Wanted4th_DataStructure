@@ -166,16 +166,19 @@ public:
 
 	// 범위 기반 루프 처리를 위한 함수 작성 (begin/end).
 	// 배열의 첫 위치를 반환하는 함수.
-	Iterator begin()
+	//Iterator begin()
+	T* begin()
 	{
 		//return Iterator(data);
 		return data;
 	}
 
 	// 배열에 저장된 마지막 요소의 다음 위치를 반환하는 함수.
-	Iterator end()
+	//Iterator end()
+	T* end()
 	{
-		return Iterator(data + size);
+		//return Iterator(data + size);
+		return data + size;
 	}
 
 private:
