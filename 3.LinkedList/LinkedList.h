@@ -70,7 +70,6 @@ public:
 				// 값 비교.
 				if (current->data >= data)
 				{
-					break;
 				}
 
 				// 다음 노드로 검색 이어가기.
