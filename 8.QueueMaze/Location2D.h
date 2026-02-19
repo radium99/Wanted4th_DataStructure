@@ -1,0 +1,17 @@
+#pragma once
+
+class Location2D {
+public:
+
+	Location2D(int row = 0, int col = 0)
+		:row(row), col(col) {
+
+	}
+
+
+public:
+	// 행 (세로)
+	int row = 0;
+	// 열 (가로)
+	int col = 0;
+};
