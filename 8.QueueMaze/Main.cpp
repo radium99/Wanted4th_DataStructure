@@ -167,19 +167,19 @@ int main()
 	PrintMap(start, 0);
 
 	// 스택 생성.
-	Stack<Location2D, mazeSize> stack;
+	Queue<Location2D, mazeSize> queue;
 
 	// 시작 위치 스택에 추가.
-	stack.Push(start);
+	queue.Push(start);
 
 	// 길찾기 (DFS).
 	// 스택이 비어있지 않으면 = 방문할 위치가 남아 있으면.
 	// 방문 빛 길찾기 진행.
-	while (!stack.IsEmpty())
+	while (!queue.IsEmpty())
 	{
 		// 방문할 위치 꺼내기.
 		Location2D current;
-		if (!stack.Pop(current))
+		if (!queue.DeQueque(current))
 		{
 			break;
 		}
@@ -203,25 +203,25 @@ int main()
 		if (IsValidLocation(
 			Location2D(current.row - 1, current.col)))
 		{
-			stack.Push(Location2D(current.row - 1, current.col));
+			queue.Push(Location2D(current.row - 1, current.col));
 		}
 
 		if (IsValidLocation(
 			Location2D(current.row + 1, current.col)))
 		{
-			stack.Push(Location2D(current.row + 1, current.col));
+			queue.Push(Location2D(current.row + 1, current.col));
 		}
 
 		if (IsValidLocation(
 			Location2D(current.row, current.col - 1)))
 		{
-			stack.Push(Location2D(current.row, current.col - 1));
+			queue.Push(Location2D(current.row, current.col - 1));
 		}
 
 		if (IsValidLocation(
 			Location2D(current.row, current.col + 1)))
 		{
-			stack.Push(Location2D(current.row, current.col + 1));
+			queue.Push(Location2D(current.row, current.col + 1));
 		}
 	}
 

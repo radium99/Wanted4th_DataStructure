@@ -18,7 +18,7 @@ public:
 
 	}
 
-	Pair(KeyType key, ValueType value)
+	Pair(const KeyType& key, const ValueType& value)
 		: key(key), value(value)
 	{
 
@@ -38,23 +38,23 @@ public:
 		return !(*this == other);
 	}
 
-	bool operator>(const Parir<KeyType, ValueType>& other)
+	bool operator>(const Pair<KeyType, ValueType>& other)
 	{
 		return key > other.key;
 	}
 
-	bool operator<(const Parir<KeyType, ValueType>& other)
+	bool operator<(const Pair<KeyType, ValueType>& other)
 	{
 		return key < other.key;
 	}
 
 
-	bool operator>=(const Parir<KeyType, ValueType>& other)
+	bool operator>=(const Pair<KeyType, ValueType>& other)
 	{
 		return key >= other.key;
 	}
 
-	bool operator<=(const Parir<KeyType, ValueType>& other)
+	bool operator<=(const Pair<KeyType, ValueType>& other)
 	{
 		return key <= other.key;
 	}

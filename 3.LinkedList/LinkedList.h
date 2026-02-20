@@ -1,3 +1,8 @@
+#include "HashTable.h"
+#include "HashTable.h"
+#include "HashTable.h"
+#include "HashTable.h"
+#include "HashTable.h"
 #pragma once
 
 #include "Node.h"
@@ -97,6 +102,7 @@ public:
 		// 저장 개수 증가.
 		++count;
 	}
+
 
 	// 출력 함수.
 	void Print()

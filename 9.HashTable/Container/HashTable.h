@@ -14,8 +14,14 @@ public:
 	~HashTable();
 
 	// 키-값 조합으로 저장할 수 있도록.
-	void Add(const std::string& key, const std::string& value);
+	bool Add(const std::string& key, const std::string& value);
+
+	// 삭제-키를 활용해 K-value 조합데이터 삭제.
+	bool Delete(const std::string& key);
+
+	bool Find(const std::string& key, Entry& outEntry); // Entry& 는 참조 받아 값을 바꿔야 하기 때문에 앞에 const를 붙이지 않음.
 	
+	void Print();
 	// Getter.
 	bool IsEmpty() const; // 해당 함수는 간단하지 않기 때문에 inline 사용하지 않도록 함.
 private:
