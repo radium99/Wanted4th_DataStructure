@@ -13,6 +13,11 @@ public:
 	HashTable();
 	~HashTable();
 
+	// 키-값 조합으로 저장할 수 있도록.
+	void Add(const std::string& key, const std::string& value);
+	
+	// Getter.
+	bool IsEmpty() const; // 해당 함수는 간단하지 않기 때문에 inline 사용하지 않도록 함.
 private:
 
 	// 내부 저장소 크기.
@@ -20,4 +25,7 @@ private:
 	// 사용 가능한 소수 중에서 큰 수를 사용.
 	static const int bucketCount = 19;
 
+	// 이차 저장소(해시 충돌 해결 방법으로 체이닝(Chaining).
+	std::vector<Entry> table[bucketCount];
+	
 };
