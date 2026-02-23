@@ -26,5 +26,11 @@ int main()
 	tree.DeleteNode(10);
 	tree.DeleteNode(8);
 
+	// 전위 순회.
+	tree.PreorderTrabverse();
+
+	// 중위 순회.
+	tree.InorderTrabverse();
+
 	std::cin.get();
 }
